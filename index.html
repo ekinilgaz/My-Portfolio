@@ -68,7 +68,7 @@
             color: var(--light);
         }
 
-        /* ====== IMAGE SCROLLER ====== */
+        /* ====== IMAGE SCROLLER (LEFT → RIGHT) ====== */
         .image-slider-container {
             width: 100%;
             overflow: hidden;
@@ -78,7 +78,7 @@
         .image-slider {
             display: flex;
             gap: 40px;
-            animation: slide 20s linear infinite;
+            animation: slideRight 20s linear infinite;
         }
 
         .image-slider img {
@@ -87,9 +87,10 @@
             box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
         }
 
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        /* LEFT → RIGHT ANIMATION */
+        @keyframes slideRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
         }
 
         /* ====== CONTACT SECTION ====== */
@@ -124,43 +125,43 @@
 </head>
 <body>
 
-    <!-- ====== HERO SECTION (EDIT YOUR NAME & TITLE HERE) ====== -->
+    <!-- ====== HERO SECTION ====== -->
     <header>
-        <h1>Ekin</h1> <!-- YOUR NAME -->
-        <h2>Frontend Developer | UI/UX Enthusiast</h2> <!-- YOUR TITLE -->
+        <h1>Ekin</h1>
+        <h2>Frontend Developer | UI/UX Enthusiast</h2>
     </header>
 
-    <!-- ====== ABOUT (EDIT YOUR DETAILS HERE) ====== -->
+    <!-- ====== ABOUT SECTION ====== -->
     <section class="about">
         <p>
             Hi! I'm Ekin, a passionate developer specializing in modern, visually appealing
             user interfaces and dynamic web experiences. I love creating digital experiences
             that are fast, smooth, and engaging.
-            <br><br>
-            <!-- You can replace this entire paragraph with your own description -->
         </p>
     </section>
 
-    <!-- ====== IMAGE SLIDER (ADD IMAGES INSIDE /images FOLDER) ====== -->
+    <!-- ====== IMAGE SLIDER ====== -->
     <div class="image-slider-container">
         <div class="image-slider">
-            <!-- Duplicate images for smooth infinite loop -->
-            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/Right%20corner%20phone%20case.png alt="">
+
+            <!-- ORIGINAL IMAGES -->
+            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/Right%20corner%20phone%20case.png" alt="">
             <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/Screenshot%202025-12-11%20095735.png" alt="">
             <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/back%20view%20phone%20case.png" alt="">
             <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/front%20view%20phone%20case.png" alt="">
             <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/left%20corner%20view%20phone%20case.png" alt="">
 
-            <!-- DUPLICATE FOR CONTINUOUS SLIDE -->
-            <img src="images/img1.jpg" alt="">
-            <img src="images/img2.jpg" alt="">
-            <img src="images/img3.jpg" alt="">
-            <img src="images/img4.jpg" alt="">
-            <img src="images/img5.jpg" alt="">
+            <!-- DUPLICATE FOR INFINITE LOOP -->
+            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/Right%20corner%20phone%20case.png" alt="">
+            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/Screenshot%202025-12-11%20095735.png" alt="">
+            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/back%20view%20phone%20case.png" alt="">
+            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/front%20view%20phone%20case.png" alt="">
+            <img src="https://github.com/ekinilgaz/My-Portfolio/blob/main/IMAGES/left%20corner%20view%20phone%20case.png" alt="">
+
         </div>
     </div>
 
-    <!-- ====== CONTACT FOOTER (EDIT YOUR CONTACT DETAILS HERE) ====== -->
+    <!-- ====== CONTACT FOOTER ====== -->
     <footer>
         <h3>Contact Me</h3>
         <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
